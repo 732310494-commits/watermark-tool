@@ -11,3 +11,44 @@
 .floatingPager button:hover:not(:disabled){background:#30383b}
 .floatingPager button:disabled{cursor:not-allowed;color:#596367;opacity:.55}
 .floatingPager svg{width:18px}
+
+/* Keep every setting reachable when the browser is short or narrow. */
+.app{height:100dvh;min-height:0}
+body{overflow-x:hidden}
+main{min-height:0}
+aside{height:100%;max-height:100%;min-height:0;padding-bottom:36px;overflow-y:auto;overflow-x:hidden;scrollbar-gutter:stable;overscroll-behavior:contain}
+.workspace{height:100%;max-height:100%;min-height:0}
+.color{display:block;min-width:0;padding-bottom:4px}
+.color>div{width:100%;max-width:180px;min-width:0;overflow:hidden}
+.color span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+@media(max-height:760px) and (min-width:801px){
+  .app{padding:8px 12px;grid-template-rows:46px minmax(0,1fr) 58px;gap:7px}
+  header{padding-inline:17px}
+  main{grid-template-columns:300px minmax(0,1fr)}
+  aside{padding:14px 17px 28px}
+  .autoDetect{padding:10px 12px;margin-bottom:10px;border-radius:11px}
+  .dropzone{height:112px;gap:3px}
+  .dropzone svg{width:32px;height:32px}
+  .controls{gap:10px;margin-top:13px}
+  .controls>label>input:not([type=range]){height:38px;margin-top:6px}
+  .range{padding-bottom:8px}
+  .range input{margin-top:6px}
+  footer{padding:6px 10px 6px 18px}
+  .download{height:44px;min-width:190px}
+}
+
+@media(max-width:1050px) and (min-width:801px){
+  main{grid-template-columns:minmax(260px,30vw) minmax(0,1fr)}
+  .formats button{min-width:62px}
+  .download{min-width:180px}
+}
+
+@media(max-width:800px){
+  .app{width:100%;height:auto;min-height:100dvh;overflow:hidden}
+  header,main,footer,.workspace{min-width:0;max-width:100%}
+  .formats{max-width:100%}
+  aside{padding-bottom:28px;overflow:visible;scrollbar-gutter:auto}
+  .color>div{max-width:100%}
+  footer{position:sticky;bottom:0;z-index:30;background:rgba(13,16,17,.96);backdrop-filter:blur(12px)}
+}
