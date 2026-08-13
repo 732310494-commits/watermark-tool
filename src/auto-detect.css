@@ -4,3 +4,10 @@
 .autoDetect strong{font-size:14px;line-height:1.2;color:#e8fff9}
 .autoDetect span{font-size:12px;line-height:1.25;color:#829894}
 .dropzone em{display:block;margin-top:7px;font-size:11px;font-style:normal;color:#6f8581}
+.viewport{position:relative}
+.floatingPager{position:sticky;top:14px;z-index:20;align-self:start;justify-self:center;display:flex;align-items:center;border:1px solid #465055;border-radius:11px;background:rgba(16,20,21,.94);box-shadow:0 8px 28px #0008;overflow:hidden;backdrop-filter:blur(12px)}
+.floatingPager strong{min-width:112px;padding:0 14px;text-align:center;font-size:13px;color:#eef5f7}
+.floatingPager button{width:42px;height:40px;display:grid;place-items:center;border:0;background:#22282a;color:#b9dcff}
+.floatingPager button:hover:not(:disabled){background:#30383b}
+.floatingPager button:disabled{cursor:not-allowed;color:#596367;opacity:.55}
+.floatingPager svg{width:18px}
